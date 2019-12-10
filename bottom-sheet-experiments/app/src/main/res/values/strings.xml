@@ -5,6 +5,7 @@
     <string name="title_activity_bottom_sheet_dialog_experiments">BottomSheetDialogExperiments</string>
     <string name="bottom_sheet_dialog_fragment">Bottom Sheet Dialog Fragment</string>
     <string name="with_edit_text_and_adjust_resize">With EditText and AdjustResize</string>
+    <string name="with_custom_corners">With Custom Corners</string>
     <string name="edit_text_and_adjust_resize">Edit Text and Adjust Resize</string>
     <string name="this_is_a_hint">This is a hint</string>
 

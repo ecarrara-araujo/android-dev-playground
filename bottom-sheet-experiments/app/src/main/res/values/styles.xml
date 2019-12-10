@@ -6,11 +6,23 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Uncomment the line bellow to apply rounded corners to all Bottom Sheet Dialogs -->
+        <!-- <item name="bottomSheetDialogTheme">@style/RoundedCornersBottomSheetDialogTheme</item> -->
     </style>
 
     <style name="EditTextAdjustResizeDialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <!-- Styles bellow can be applied to specific bottom sheets or directly in the app theme -->
+    <style name="RoundedCornersBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/RoundedCornersModalBottomSheetStyle</item>
+    </style>
+
+    <style name="RoundedCornersModalBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_rounded_corners_background</item>
     </style>
 
 </resources>
