@@ -10,3 +10,4 @@ It is a view that provides additional information and/or actions contextualised 
 ## Index
 
 - Combining `BottomSheetDialogFragment` + `EditText` + `adjustResize`
+- Applying a custom background with rounded top corners to a `BottomSheetDialogFragment`
