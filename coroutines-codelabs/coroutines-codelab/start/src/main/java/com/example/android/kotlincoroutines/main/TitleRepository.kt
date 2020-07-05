@@ -18,10 +18,9 @@ package com.example.android.kotlincoroutines.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
-import com.example.android.kotlincoroutines.util.BACKGROUND
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeout
 
 /**
  * TitleRepository provides an interface to fetch a title or request a new one be generated.
@@ -53,43 +52,14 @@ class TitleRepository(val network: MainNetwork, val titleDao: TitleDao) {
      * This method does not return the new title. Use [TitleRepository.title] to observe
      * the current tile.
      */
-    fun refreshTitleWithCallbacks(titleRefreshCallback: TitleRefreshCallback) {
-        // This request will be run on a background thread by retrofit
-        BACKGROUND.submit {
-            try {
-                // Make network request using a blocking call
-                val result = network.fetchNextTitle().execute()
-                if (result.isSuccessful) {
-                    // Save it to database
-                    titleDao.insertTitle(Title(result.body()!!))
-                    // Inform the caller the refresh is completed
-                    titleRefreshCallback.onCompleted()
-                } else {
-                    // If it's not successful, inform the callback of the error
-                    titleRefreshCallback.onError(
-                            TitleRefreshError("Unable to refresh title", null))
-                }
-            } catch (cause: Throwable) {
-                // If anything throws an exception, inform the caller
-                titleRefreshCallback.onError(
-                        TitleRefreshError("Unable to refresh title", cause))
-            }
-        }
-    }
-
     suspend fun refreshTitle() {
-        withContext(Dispatchers.IO) {
-            val result = try {
-                network.fetchNextTitle().execute()
-            } catch (cause: Throwable) {
-                throw TitleRefreshError("Unable to refresh title", null)
+        try {
+            val nextTitle = withTimeout(5_000) {
+                network.fetchNextTitle()
             }
-
-            if (result.isSuccessful) {
-                titleDao.insertTitle(Title(result.body()!!))
-            } else {
-                throw TitleRefreshError("Unable to refresh title", null)
-            }
+            titleDao.insertTitle(Title(nextTitle))
+        } catch (cause: Throwable) {
+            throw TitleRefreshError("Unable to refresh title", null)
         }
     }
 }
