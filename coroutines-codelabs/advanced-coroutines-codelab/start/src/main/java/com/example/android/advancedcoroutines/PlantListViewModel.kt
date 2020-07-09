@@ -18,6 +18,9 @@ package com.example.android.advancedcoroutines
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.channels.ConflatedBroadcastChannel
+import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 
 /**
@@ -66,7 +69,16 @@ class PlantListViewModel internal constructor(
         }
     }
 
-    val plantsUsingFlow: LiveData<List<Plant>> = plantRepository.plantsFlow.asLiveData()
+    private val growZoneChannel = ConflatedBroadcastChannel<GrowZone>()
+
+    val plantsUsingFlow: LiveData<List<Plant>> = growZoneChannel.asFlow()
+        .flatMapLatest { growZone ->
+            if (growZone == NoGrowZone) {
+                plantRepository.plantsFlow
+            } else {
+                plantRepository.getPlantsWithGrowZoneFlow(growZone)
+            }
+        }.asLiveData()
 
     init {
         // When creating a new ViewModel, clear the grow zone and perform any related udpates
@@ -83,9 +95,12 @@ class PlantListViewModel internal constructor(
      */
     fun setGrowZoneNumber(num: Int) {
         growZone.value = GrowZone(num)
+        growZoneChannel.offer(GrowZone(num))
 
         // initial code version, will move during flow rewrite
-        launchDataLoad { plantRepository.tryUpdateRecentPlantsCache() }
+        launchDataLoad {
+            plantRepository.tryUpdateRecentPlantsForGrowZoneCache(GrowZone(num))
+        }
     }
 
     /**
@@ -96,9 +111,12 @@ class PlantListViewModel internal constructor(
      */
     fun clearGrowZoneNumber() {
         growZone.value = NoGrowZone
+        growZoneChannel.offer(NoGrowZone)
 
         // initial code version, will move during flow rewrite
-        launchDataLoad { plantRepository.tryUpdateRecentPlantsCache() }
+        launchDataLoad {
+            plantRepository.tryUpdateRecentPlantsCache()
+        }
     }
 
     /**
