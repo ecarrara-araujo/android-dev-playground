@@ -51,7 +51,14 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
         PendingIntent.FLAG_UPDATE_CURRENT
     )
 
-    // TODO: Step 2.0 add style
+    // Step 2.0 add style
+    val eggimage = BitmapFactory.decodeResource(
+        applicationContext.resources,
+        R.drawable.cooked_egg
+    )
+    val bigPictureStyle = NotificationCompat.BigPictureStyle()
+        .bigPicture(eggimage)
+        .bigLargeIcon(null)
 
     // TODO: Step 2.2 add snooze action
 
@@ -71,8 +78,9 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     // Step 1.13 set content intent
         .setContentIntent(contentPendingIntent)
         .setAutoCancel(true)
-
-        // TODO: Step 2.1 add style to builder
+    // Step 2.1 add style to builder
+        .setStyle(bigPictureStyle)
+        .setLargeIcon(eggimage)
 
         // TODO: Step 2.3 add snooze action
 
