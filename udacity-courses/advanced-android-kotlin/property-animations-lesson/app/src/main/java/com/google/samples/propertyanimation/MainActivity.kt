@@ -76,15 +76,7 @@ class MainActivity : AppCompatActivity() {
     private fun rotater() {
         ObjectAnimator.ofFloat(star, View.ROTATION, -360f, 0f).apply {
             duration = 1_000
-            addListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationStart(animation: Animator?) {
-                    rotateButton.isEnabled = false
-                }
-
-                override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
-                    rotateButton.isEnabled = true
-                }
-            })
+            disableViewDuringAnimation(rotateButton)
         }. start()
     }
 
@@ -103,4 +95,15 @@ class MainActivity : AppCompatActivity() {
     private fun shower() {
     }
 
+    private fun ObjectAnimator.disableViewDuringAnimation(view: View) {
+        addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationStart(animation: Animator?) {
+                view.isEnabled = false
+            }
+
+            override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
+                view.isEnabled = true
+            }
+        })
+    }
 }
