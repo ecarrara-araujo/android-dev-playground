@@ -81,6 +81,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun translater() {
+        ObjectAnimator.ofFloat(star, View.TRANSLATION_X, 200f).apply {
+            repeatCount = 1
+            repeatMode = ObjectAnimator.REVERSE
+            disableViewDuringAnimation(translateButton)
+        }.start()
     }
 
     private fun scaler() {
