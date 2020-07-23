@@ -19,6 +19,7 @@ package com.google.samples.propertyanimation
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -89,6 +90,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun scaler() {
+        ObjectAnimator.ofPropertyValuesHolder(
+            star,
+            PropertyValuesHolder.ofFloat(View.SCALE_X, 4f),
+            PropertyValuesHolder.ofFloat(View.SCALE_Y, 4f)
+        ).apply {
+            repeatCount = 1
+            repeatMode = ObjectAnimator.REVERSE
+            disableViewDuringAnimation(scaleButton)
+        }.start()
     }
 
     private fun fader() {
