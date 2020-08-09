@@ -33,7 +33,14 @@ class Step8Activity : AppCompatActivity() {
     }
 
     private fun coordinateMotion() {
-        // TODO: set progress of MotionLayout based on an AppBarLayout.OnOffsetChangedListener
+        val appBarLayout: AppBarLayout = findViewById(R.id.appbar_layout)
+        val motionLayout: MotionLayout = findViewById(R.id.motion_layout)
 
+        appBarLayout.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
+                // calculate the progress as a number between 0.0 and 1.0
+                // in this case is how much the offset represent of the total scroll range
+                motionLayout.progress = -verticalOffset / appBarLayout.totalScrollRange.toFloat()
+            })
     }
 }
