@@ -3,6 +3,7 @@ package br.com.ecarrara.composecodelabbasics
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
@@ -18,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
+import androidx.ui.tooling.preview.UiMode
 import br.com.ecarrara.composecodelabbasics.ui.ComposeCodelabBasicsTheme
 
 class MainActivity : AppCompatActivity() {
@@ -32,8 +34,8 @@ class MainActivity : AppCompatActivity() {
 }
 
 @Composable
-fun MyApp(content: @Composable () -> Unit) {
-    ComposeCodelabBasicsTheme {
+fun MyApp(isDarkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+    ComposeCodelabBasicsTheme(darkTheme = isDarkTheme) {
         // A surface container using the 'background' color from the theme
         Surface(color = MaterialTheme.colors.background) {
             content()
@@ -43,7 +45,11 @@ fun MyApp(content: @Composable () -> Unit) {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!", modifier = Modifier.padding(24.dp))
+    Text(
+            text = "Hello $name!",
+            modifier = Modifier.padding(24.dp),
+            style = MaterialTheme.typography.h1
+    )
 }
 
 @Composable
@@ -77,10 +83,18 @@ fun Counter(count: Int, updateCount: (Int) -> Unit) {
     }
 }
 
-@Preview(showBackground = true, name = "Text Preview")
+@Preview(showBackground = true, name = "Text Preview", showDecoration = true)
 @Composable
 fun DefaultPreview() {
     MyApp {
+        MyScreenContent()
+    }
+}
+
+@Preview(showBackground = true, name = "Dark Mode Preview", showDecoration = true)
+@Composable
+fun DarkPreview() {
+    MyApp(isDarkTheme = true) {
         MyScreenContent()
     }
 }
