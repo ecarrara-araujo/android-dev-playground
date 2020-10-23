@@ -2,10 +2,7 @@ package br.com.ecarrara.compose_codelab_layout
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.Icon
-import androidx.compose.foundation.Text
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -45,28 +42,28 @@ class MainActivity : AppCompatActivity() {
 @Composable
 fun LayoutsCodelab() {
     Scaffold(
-            topBar = {
-                TopAppBar(
-                        title = {
-                            Text(text = "LayoutsCodelab")
-                        },
-                        actions = {
-                            IconButton(onClick = { /* Do nothing for now */ }) {
-                                Icon(Icons.Filled.AccountBalanceWallet)
-                            }
-                        }
-                )
-            },
-            bottomBar = {
-                BottomAppBar {
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "LayoutsCodelab")
+                },
+                actions = {
                     IconButton(onClick = { /* Do nothing for now */ }) {
-                        Icon(Icons.Filled.Star)
+                        Icon(Icons.Filled.AccountBalanceWallet)
                     }
                 }
-            },
-            drawerContent = {
-                Text(text = "Wololo menu")
+            )
+        },
+        bottomBar = {
+            BottomAppBar {
+                IconButton(onClick = { /* Do nothing for now */ }) {
+                    Icon(Icons.Filled.Star)
+                }
             }
+        },
+        drawerContent = {
+            Text(text = "Wololo menu")
+        }
     ) { innerPadding ->
         BodyContent(Modifier.padding(innerPadding).padding(8.dp))
     }
@@ -75,13 +72,22 @@ fun LayoutsCodelab() {
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
     Column(modifier) {
-        Text(text = "Hi there!")
-        Text(text = "Thanks for going through the Layouts Codelab")
-        MyOwnColumn(modifier.padding(8.dp)) {
-            Text(text = "MyOwnColumn")
-            Text(text = "places items")
-            Text(text = "vertically.")
-            Text(text = "We've done it manually!")
+        ScrollableRow(modifier = modifier) {
+            StaggeredGrid {
+                for (topic in topics) {
+                    Chip(modifier = Modifier.padding(8.dp), text = topic)
+                }
+            }
+        }
+        Column {
+            Text(text = "Hi there!")
+            Text(text = "Thanks for going through the Layouts Codelab")
+            MyOwnColumn(modifier.padding(8.dp)) {
+                Text(text = "MyOwnColumn")
+                Text(text = "places items")
+                Text(text = "vertically.")
+                Text(text = "We've done it manually!")
+            }
         }
     }
 }
@@ -97,7 +103,8 @@ fun LayoutsCodelabPreview() {
 
 @Composable
 fun PhotographerCard(modifier: Modifier = Modifier) {
-    Row(modifier
+    Row(
+        modifier
             .padding(8.dp)
             .clip(RoundedCornerShape(4.dp))
             .background(MaterialTheme.colors.surface)
@@ -105,16 +112,16 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
             .padding(16.dp)
     ) {
         Surface(
-                modifier = Modifier.preferredSize(50.dp),
-                shape = CircleShape,
-                color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
+            modifier = Modifier.preferredSize(50.dp),
+            shape = CircleShape,
+            color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
         ) {
 
         }
         Column(
-                modifier = Modifier
-                        .padding(start = 8.dp)
-                        .align(Alignment.CenterVertically)
+            modifier = Modifier
+                .padding(start = 8.dp)
+                .align(Alignment.CenterVertically)
         ) {
             Text(text = "Alfred Sisley", fontWeight = FontWeight.Bold)
             ProvideEmphasis(AmbientEmphasisLevels.current.medium) {
@@ -133,7 +140,7 @@ fun PhotographerCardPreview() {
 }
 
 fun Modifier.firsBaselineToTop(
-        firstBaselineToTop: Dp
+    firstBaselineToTop: Dp
 ) = Modifier.layout { measurable, constraints ->
     val placeable = measurable.measure(constraints)
 
@@ -155,8 +162,8 @@ fun Modifier.firsBaselineToTop(
 fun TextWithPaddingToBaselinePreview() {
     ComposeCodelabLayoutTheme {
         Text(
-                text = "Hi there!",
-                modifier = Modifier.firsBaselineToTop(32.dp)
+            text = "Hi there!",
+            modifier = Modifier.firsBaselineToTop(32.dp)
         )
     }
 }
@@ -166,20 +173,20 @@ fun TextWithPaddingToBaselinePreview() {
 fun TextWithNormalPaddingPreview() {
     ComposeCodelabLayoutTheme {
         Text(
-                text = "Hi there!",
-                modifier = Modifier.padding(top = 32.dp)
+            text = "Hi there!",
+            modifier = Modifier.padding(top = 32.dp)
         )
     }
 }
 
 @Composable
 fun MyOwnColumn(
-        modifier: Modifier = Modifier,
-        children: @Composable () -> Unit
+    modifier: Modifier = Modifier,
+    children: @Composable () -> Unit
 ) {
     Layout(
-            modifier = modifier,
-            children = children
+        modifier = modifier,
+        children = children
     ) { measurables, constraints ->
 
         // Don't constrain child views further, measure them with given constraints
