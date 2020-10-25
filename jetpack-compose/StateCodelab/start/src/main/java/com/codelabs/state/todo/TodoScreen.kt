@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import com.codelabs.state.util.generateRandomTodoItem
+import com.google.android.material.snackbar.BaseTransientBottomBar
 import kotlin.random.Random
 
 /**
@@ -126,6 +127,13 @@ fun PreviewTodoRow() {
 @Composable
 fun TodoItemInput(onItemComplete: (TodoItem) -> Unit) {
     val (text, setText) = remember { mutableStateOf("") }
+    val (icon, setIcon) = remember { mutableStateOf(TodoIcon.Default) }
+    val iconsVisible = text.isNotBlank()
+    val submit = {
+        onItemComplete(TodoItem(text, icon)) // send onItemComplete event up
+        setIcon(TodoIcon.Default)
+        setText("") // clear the internal state
+    }
     Column {
         Row(
             Modifier
@@ -137,17 +145,24 @@ fun TodoItemInput(onItemComplete: (TodoItem) -> Unit) {
                 onTextChange = setText,
                 modifier = Modifier
                     .weight(1f)
-                    .padding(end = 8.dp)
+                    .padding(end = 8.dp),
+                onImeAction = submit
             )
             TodoEditButton(
-                onClick = {
-                    onItemComplete(TodoItem(text)) // send onItemComplete event up
-                    setText("") // clear the internal state
-                },
+                onClick = submit,
                 text = "Add",
                 modifier = Modifier.align(Alignment.CenterVertically),
                 enabled = text.isNotBlank()
             )
+        }
+        if (iconsVisible) {
+            AnimatedIconRow(
+                icon = icon,
+                onIconChange = setIcon,
+                modifier = Modifier.padding(top = 8.dp)
+            )
+        } else {
+            Spacer(modifier = Modifier.preferredHeight(16.dp))
         }
     }
 }
