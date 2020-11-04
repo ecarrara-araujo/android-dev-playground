@@ -1,0 +1,2 @@
+rootProject.name = "Basic Commonplace Studies"
+include ':app'
