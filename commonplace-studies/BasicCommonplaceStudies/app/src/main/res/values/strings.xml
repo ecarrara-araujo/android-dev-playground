@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Basic Commonplace Studies</string>
+    <string name="main_screen_cta_button_experiments">Button Experiments</string>
+    <string name="button_experiments_material_button_cta">Material Button</string>
+    <string name="button_experiments_simple_button_cta">Simple Button</string>
 </resources>
