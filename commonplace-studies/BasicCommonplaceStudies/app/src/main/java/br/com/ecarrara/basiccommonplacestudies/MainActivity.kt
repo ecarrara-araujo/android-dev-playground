@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,8 +19,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpButtons() {
-        screenBinding.buttonExperimentsButton.setOnClickListener {
-            startActivity(Intent(this, ButtonExperimentsActivity::class.java))
+        with(screenBinding) {
+            buttonExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, ButtonExperimentsActivity::class.java))
+            }
+            checkboxExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, CheckboxExperimentsActivity::class.java))
+            }
         }
     }
 }

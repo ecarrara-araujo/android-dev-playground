@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.checkbox.CheckboxExperimentsActivity">
+
+    <TextView
+        android:id="@+id/checkboxesTitleTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/checkbox_experiments_material_checkboxes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/selectedCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/checkbox_experiments_check1_selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxesTitleTextView" />
+
+    <CheckBox
+        android:id="@+id/unselectedCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkbox_experiments_check2_unselected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedCheckbox" />
+
+    <CheckBox
+        android:id="@+id/disabledCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/checkbox_experiments_check3_disabled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unselectedCheckbox" />
+
+    <CheckBox
+        android:id="@+id/styledCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/purple_500"
+        android:text="@string/checkbox_experiments_check4_styled"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:textColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/disabledCheckbox" />
+
+    <TextView
+        android:id="@+id/checkboxesGroupSubTitleTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/checkbox_experiments_material_checkboxes_groups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/styledCheckbox" />
+
+    <CheckBox
+        android:id="@+id/parentGroupCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/black"
+        android:text="@string/checkbox_experiments_option_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxesGroupSubTitleTextView" />
+
+    <CheckBox
+        android:id="@+id/option1CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:buttonTint="@color/black"
+        android:text="@string/checkbox_experiments_option1"
+        app:layout_constraintStart_toStartOf="@id/parentGroupCheckbox"
+        app:layout_constraintTop_toBottomOf="@id/parentGroupCheckbox" />
+
+    <CheckBox
+        android:id="@+id/option2CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/black"
+        android:text="@string/checkbox_experiments_option2"
+        app:layout_constraintStart_toStartOf="@id/option1CheckBox"
+        app:layout_constraintTop_toBottomOf="@id/option1CheckBox" />
+
+    <CheckBox
+        android:id="@+id/option3CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/black"
+        android:text="@string/checkbox_experiments_option3"
+        app:layout_constraintStart_toStartOf="@id/option2CheckBox"
+        app:layout_constraintTop_toBottomOf="@id/option2CheckBox" />
+
+    <CheckBox
+        android:id="@+id/toggleCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:button="@drawable/selector_favorite_24dp"
+        android:buttonTint="@color/purple_500"
+        android:paddingHorizontal="4dp"
+        android:text="@string/checkbox_experiments_checkbox_with_custom_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option3CheckBox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

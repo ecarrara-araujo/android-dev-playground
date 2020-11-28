@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Basic Commonplace Studies</string>
 
-    <!-- Button Experiments -->
+    <!-- Main Screen -->
     <string name="main_screen_cta_button_experiments">Button Experiments</string>
+    <string name="main_screen_cta_checkbox_experiments">Checkbox Experiments</string>
+
+    <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
     <string name="button_experiments_theme_styled_material_buttons">Theme Styled Material Buttons</string>
     <string name="button_experiments_android_base_buttons">Android Base Buttons</string>
@@ -14,4 +17,17 @@
     <string name="button_experiments_toggle1">Toggle 1</string>
     <string name="button_experiments_toggle2">Toggle 2</string>
     <string name="button_experiments_toggle3">Toggle 3</string>
+
+    <!-- Checkbox Experiments -->
+    <string name="checkbox_experiments_material_checkboxes">Material Checkboxes</string>
+    <string name="checkbox_experiments_material_checkboxes_groups">Material Checkboxes Groups</string>
+    <string name="checkbox_experiments_check1_selected">Checkbox 1 - Selected</string>
+    <string name="checkbox_experiments_check2_unselected">Checkbox 2 - Unselected</string>
+    <string name="checkbox_experiments_check3_disabled">Checkbox 3 - Disabled</string>
+    <string name="checkbox_experiments_check4_styled">Checkbox 4 - Some Style</string>
+    <string name="checkbox_experiments_option_group">Option Group</string>
+    <string name="checkbox_experiments_option1">Option 1</string>
+    <string name="checkbox_experiments_option2">Option 2</string>
+    <string name="checkbox_experiments_option3">Option 3</string>
+    <string name="checkbox_experiments_checkbox_with_custom_icon">Checkbox with Custom Icon</string>
 </resources>
