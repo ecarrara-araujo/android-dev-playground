@@ -14,18 +14,19 @@ class ButtonExperimentsActivity : AppCompatActivity() {
         screenBindings = ActivityButtonExperimentsBinding.inflate(layoutInflater)
         setContentView(screenBindings.root)
         setUpMaterialButton()
-        setUpSimpleButton()
+        setUpToggleGroup()
+    }
+
+    private fun setUpToggleGroup() {
+        screenBindings.materialToggleButtonGroup
+            .addOnButtonCheckedListener { group, checkedId, isChecked ->
+                Toast.makeText(this, "Toggled: $checkedId", Toast.LENGTH_LONG).show()
+            }
     }
 
     private fun setUpMaterialButton() {
         screenBindings.materialButton.setOnClickListener {
             Toast.makeText(this, "This is a material Toast", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    private fun setUpSimpleButton() {
-        screenBindings.simpleButton.setOnClickListener {
-            Toast.makeText(this, "This is a simple toast", Toast.LENGTH_LONG).show()
         }
     }
 }

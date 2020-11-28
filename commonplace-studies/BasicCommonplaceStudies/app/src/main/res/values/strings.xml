@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Basic Commonplace Studies</string>
+
+    <!-- Button Experiments -->
     <string name="main_screen_cta_button_experiments">Button Experiments</string>
+    <string name="button_experiments_material_buttons">Material Buttons</string>
+    <string name="button_experiments_theme_styled_material_buttons">Theme Styled Material Buttons</string>
+    <string name="button_experiments_android_base_buttons">Android Base Buttons</string>
     <string name="button_experiments_material_button_cta">Material Button</string>
-    <string name="button_experiments_simple_button_cta">Simple Button</string>
+    <string name="button_experiments_styled_material_button_cta">Styled Material Button</string>
+    <string name="button_experiments_text">Text</string>
+    <string name="button_experiments_outlined">Outlined</string>
+    <string name="button_experiments_contained">Contained</string>
+    <string name="button_experiments_toggle1">Toggle 1</string>
+    <string name="button_experiments_toggle2">Toggle 2</string>
+    <string name="button_experiments_toggle3">Toggle 3</string>
 </resources>
