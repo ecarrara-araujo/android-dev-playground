@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityButtonExperimentsBinding
+import br.com.ecarrara.basiccommonplacestudies.extensions.showToast
 import com.google.android.material.button.MaterialButton
 
 class ButtonExperimentsActivity : AppCompatActivity() {
@@ -37,9 +38,5 @@ class ButtonExperimentsActivity : AppCompatActivity() {
             val isChecked = (screenBindings.customFavoriteButton as? MaterialButton)?.isChecked
             showToast("Favorite Button clicked isChecked: $isChecked")
         }
-    }
-
-    private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
-        Toast.makeText(this, message, duration).show()
     }
 }

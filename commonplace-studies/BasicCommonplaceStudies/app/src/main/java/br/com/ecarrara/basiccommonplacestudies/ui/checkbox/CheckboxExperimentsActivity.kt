@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityCheckboxExperimentsBinding
+import br.com.ecarrara.basiccommonplacestudies.extensions.showToast
 
 class CheckboxExperimentsActivity : AppCompatActivity() {
 
@@ -29,12 +30,8 @@ class CheckboxExperimentsActivity : AppCompatActivity() {
                 option1CheckBox.isChecked = isChecked
                 option2CheckBox.isChecked = isChecked
                 option3CheckBox.isChecked = isChecked
-                displayToast("Checkbox ${screenBinding.parentGroupCheckbox.text} checked state: $isChecked")
+                showToast("Checkbox ${screenBinding.parentGroupCheckbox.text} checked state: $isChecked")
             }
         }
-    }
-
-    private fun displayToast(text: String) {
-        Toast.makeText(this@CheckboxExperimentsActivity, text, Toast.LENGTH_SHORT).show()
     }
 }
