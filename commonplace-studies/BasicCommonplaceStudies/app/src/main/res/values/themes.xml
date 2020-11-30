@@ -13,4 +13,8 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="ThemeOverlay.ColorControlHighlight.ColorPrimary" parent="ThemeOverlay.AppCompat">
+        <item name="colorControlHighlight">@color/selector_favorite_button_ripple</item>
+    </style>
 </resources>

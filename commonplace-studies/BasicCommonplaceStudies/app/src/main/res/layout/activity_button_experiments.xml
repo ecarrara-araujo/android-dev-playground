@@ -199,7 +199,18 @@
         android:layout_height="wrap_content"
         app:icon="@drawable/ic_baseline_android_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/customFavoriteButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/materialToggleIconButtonGroup" />
+
+    <Button
+        android:id="@+id/customFavoriteButton"
+        style="@style/Widget.App.Button.Favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/materialIconButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/materialIconButton"
+        app:layout_constraintTop_toTopOf="@id/materialIconButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,4 +20,11 @@
         <item name="android:minWidth">48dp</item>
         <item name="android:minHeight">48dp</item>
     </style>
+
+    <style name="Widget.App.Button.Favorite" parent="Widget.App.Button.Borderless.IconOnly">
+        <item name="android:checkable">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="theme">@style/ThemeOverlay.ColorControlHighlight.ColorPrimary</item>
+        <item name="icon">@drawable/selector_favorite_24dp</item>
+    </style>
 </resources>
