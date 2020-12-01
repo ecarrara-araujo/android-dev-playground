@@ -4,6 +4,7 @@
     <!-- Main Screen -->
     <string name="main_screen_cta_button_experiments">Button Experiments</string>
     <string name="main_screen_cta_checkbox_experiments">Checkbox Experiments</string>
+    <string name="main_screen_cta_radio_button_experiments">Radio Buttons Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -30,4 +31,11 @@
     <string name="checkbox_experiments_option2">Option 2</string>
     <string name="checkbox_experiments_option3">Option 3</string>
     <string name="checkbox_experiments_checkbox_with_custom_icon">Checkbox with Custom Icon</string>
+
+    <!-- Radio Button Experiments -->
+    <string name="radio_buttons_experiments_material_radio_buttons">Material Radio Buttons</string>
+    <string name="radio_buttons_experiments_radio1_selected">Radio 1 - Selected</string>
+    <string name="radio_buttons_experiments_radio2_unselected">Radio 2 - Unselected</string>
+    <string name="radio_buttons_experiments_radio3_disabled">Radio 3 - Disabled</string>
+    <string name="radio_buttons_experiments_radio4_styled">Radio 4 - Some Style</string>
 </resources>

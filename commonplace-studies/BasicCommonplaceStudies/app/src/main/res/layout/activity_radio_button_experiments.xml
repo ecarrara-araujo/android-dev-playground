@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.radiobutton.RadioButtonExperimentsActivity">
+
+    <TextView
+        android:id="@+id/materialSectionTitleTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/radio_buttons_experiments_material_radio_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:checkedButton="@id/radioButtonSelected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionTitleTextView">
+
+        <RadioButton
+            android:id="@+id/radioButtonSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_buttons_experiments_radio1_selected" />
+
+        <RadioButton
+            android:id="@+id/radioButtonUnselected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_buttons_experiments_radio2_unselected" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDisabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/radio_buttons_experiments_radio3_disabled" />
+
+        <RadioButton
+            android:id="@+id/radioButtonStyled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_buttons_experiments_radio4_styled"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/teal_200"
+            app:buttonTint="@color/selector_radio_button_tint" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

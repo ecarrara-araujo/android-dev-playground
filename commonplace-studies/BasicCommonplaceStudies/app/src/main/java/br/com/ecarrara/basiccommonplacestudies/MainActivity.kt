@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
             }
             checkboxExperimentsButton.setOnClickListener {
                 startActivity(Intent(this@MainActivity, CheckboxExperimentsActivity::class.java))
+            }
+            radioButtonsExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, RadioButtonExperimentsActivity::class.java))
             }
         }
     }
