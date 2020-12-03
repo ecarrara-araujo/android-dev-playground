@@ -7,6 +7,7 @@ import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.switches.SwitchesExperimentsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
             }
             radioButtonsExperimentsButton.setOnClickListener {
                 startActivity(Intent(this@MainActivity, RadioButtonExperimentsActivity::class.java))
+            }
+            switchesExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, SwitchesExperimentsActivity::class.java))
             }
         }
     }

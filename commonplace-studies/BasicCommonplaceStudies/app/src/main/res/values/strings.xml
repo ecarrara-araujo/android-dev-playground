@@ -5,6 +5,7 @@
     <string name="main_screen_cta_button_experiments">Button Experiments</string>
     <string name="main_screen_cta_checkbox_experiments">Checkbox Experiments</string>
     <string name="main_screen_cta_radio_button_experiments">Radio Buttons Experiments</string>
+    <string name="main_screen_cta_switch_experiments">Switches Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -38,4 +39,11 @@
     <string name="radio_buttons_experiments_radio2_unselected">Radio 2 - Unselected</string>
     <string name="radio_buttons_experiments_radio3_disabled">Radio 3 - Disabled</string>
     <string name="radio_buttons_experiments_radio4_styled">Radio 4 - Some Style</string>
+
+    <!-- Switches Experiments -->
+    <string name="switch_experiments_material_switches">Material Switches</string>
+    <string name="switch_buttons_experiments_switch1_checked">Switch 1 - Checked</string>
+    <string name="switch_buttons_experiments_switch2_unselected">Switch 2 - Unchecked</string>
+    <string name="switch_buttons_experiments_switch3_disabled">Switch 3 - Disabled</string>
+    <string name="switch_buttons_experiments_switch4_styled">Switch 4 - Some Style</string>
 </resources>

@@ -25,6 +25,9 @@
         <activity
             android:name=".ui.radiobutton.RadioButtonExperimentsActivity"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.switches.SwitchesExperimentsActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

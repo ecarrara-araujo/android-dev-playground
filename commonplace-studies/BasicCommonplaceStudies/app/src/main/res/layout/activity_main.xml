@@ -25,4 +25,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_screen_cta_radio_button_experiments" />
 
+    <Button
+        android:id="@+id/switchesExperimentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_screen_cta_switch_experiments" />
+
 </LinearLayout>
