@@ -8,6 +8,7 @@ import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivi
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.switches.SwitchesExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.textfields.TextFieldsExperimentsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,9 @@ class MainActivity : AppCompatActivity() {
             }
             switchesExperimentsButton.setOnClickListener {
                 startActivity(Intent(this@MainActivity, SwitchesExperimentsActivity::class.java))
+            }
+            textInputExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, TextFieldsExperimentsActivity::class.java))
             }
         }
     }

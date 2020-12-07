@@ -6,6 +6,7 @@
     <string name="main_screen_cta_checkbox_experiments">Checkbox Experiments</string>
     <string name="main_screen_cta_radio_button_experiments">Radio Buttons Experiments</string>
     <string name="main_screen_cta_switch_experiments">Switches Experiments</string>
+    <string name="main_screen_cta_text_fields_experiments">Text Fields Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -46,4 +47,13 @@
     <string name="switch_buttons_experiments_switch2_unselected">Switch 2 - Unchecked</string>
     <string name="switch_buttons_experiments_switch3_disabled">Switch 3 - Disabled</string>
     <string name="switch_buttons_experiments_switch4_styled">Switch 4 - Some Style</string>
+
+    <!-- Text Field Experiments -->
+    <string name="text_field_experiments_material_filled_text_field">Material Filled Text Field</string>
+    <string name="text_field_experiments_material_outlined_text_field">Material Outlined Text Field</string>
+    <string name="text_field_experiments_material_filled_hint">Filled</string>
+    <string name="text_field_experiments_material_filled_helper_text">Helper Text for Filled</string>
+    <string name="text_field_experiments_material_dropdown_hint">Pick an Option</string>
+    <string name="text_field_experiments_material_outlined_hint">Outlined</string>
+    <string name="text_field_experiments_material_outlined_helper_text">Helper Text for Outlined</string>
 </resources>

@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_screen_cta_switch_experiments" />
 
+    <Button
+        android:id="@+id/textInputExperimentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_screen_cta_text_fields_experiments" />
+
 </LinearLayout>

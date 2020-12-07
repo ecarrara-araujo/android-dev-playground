@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.textfields.TextFieldsExperimentsActivity">
+
+    <TextView
+        android:id="@+id/materialSectionTitleFilledTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/text_field_experiments_material_filled_text_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_filled_hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:endIconMode="clear_text"
+        app:helperText="@string/text_field_experiments_material_filled_helper_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionTitleFilledTextView"
+        app:startIconDrawable="@drawable/ic_baseline_android_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filledTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledDropdownTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_dropdown_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filledTextInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+        <AutoCompleteTextView
+            android:id="@+id/filledDropdownAutocompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledStyledTextInputLayout"
+        style="@style/Widget.App.TextInputLayout.Filled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_filled_hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:endIconMode="clear_text"
+        app:helperText="@string/text_field_experiments_material_filled_helper_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filledDropdownTextInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_android_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filledStyledTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/midScreenGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/materialSectionTitleOutlinedTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/text_field_experiments_material_outlined_text_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/midScreenGuideline" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_outlined_hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:endIconMode="clear_text"
+        app:helperText="@string/text_field_experiments_material_outlined_helper_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionTitleOutlinedTextView"
+        app:startIconDrawable="@drawable/ic_baseline_android_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/outlinedTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedDropdownTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_dropdown_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outlinedTextInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_favorite_24">
+
+        <AutoCompleteTextView
+            android:id="@+id/outlinedDropdownAutocompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Customise with Shapes, Colors etc -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedStyledTextInputLayout"
+        style="@style/Widget.App.TextInputLayout.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/text_field_experiments_material_outlined_hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:endIconMode="clear_text"
+        app:helperText="@string/text_field_experiments_material_outlined_helper_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outlinedDropdownTextInputLayout"
+        app:startIconDrawable="@drawable/ic_baseline_android_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/outlinedStyledTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
