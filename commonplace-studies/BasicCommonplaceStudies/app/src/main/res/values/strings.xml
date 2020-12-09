@@ -7,6 +7,7 @@
     <string name="main_screen_cta_radio_button_experiments">Radio Buttons Experiments</string>
     <string name="main_screen_cta_switch_experiments">Switches Experiments</string>
     <string name="main_screen_cta_text_fields_experiments">Text Fields Experiments</string>
+    <string name="main_screen_cta_sliders_experiments">Sliders Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -56,4 +57,8 @@
     <string name="text_field_experiments_material_dropdown_hint">Pick an Option</string>
     <string name="text_field_experiments_material_outlined_hint">Outlined</string>
     <string name="text_field_experiments_material_outlined_helper_text">Helper Text for Outlined</string>
+
+    <!-- Sliders Experiments -->
+    <string name="sliders_experiments_material_continous_slider">Material Slider Continuous</string>
+    <string name="sliders_experiments_material_discrete_slider">Material Slider Discrete</string>
 </resources>

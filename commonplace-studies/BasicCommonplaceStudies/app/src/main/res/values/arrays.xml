@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="range_slider_initial_values">
+        <item>30.0</item>
+        <item>80.0</item>
+    </array>
+</resources>

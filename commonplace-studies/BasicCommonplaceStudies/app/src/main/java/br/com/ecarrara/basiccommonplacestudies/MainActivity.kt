@@ -7,6 +7,7 @@ import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.sliders.SlidersExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.switches.SwitchesExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.textfields.TextFieldsExperimentsActivity
 
@@ -37,6 +38,9 @@ class MainActivity : AppCompatActivity() {
             }
             textInputExperimentsButton.setOnClickListener {
                 startActivity(Intent(this@MainActivity, TextFieldsExperimentsActivity::class.java))
+            }
+            slidersExperimentsButton.setOnClickListener {
+                startActivity(Intent(this@MainActivity, SlidersExperimentsActivity::class.java))
             }
         }
     }
