@@ -25,23 +25,27 @@ class MainActivity : AppCompatActivity() {
     private fun setUpButtons() {
         with(screenBinding) {
             buttonExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, ButtonExperimentsActivity::class.java))
+                navigateTo(ButtonExperimentsActivity::class.java)
             }
             checkboxExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, CheckboxExperimentsActivity::class.java))
+                navigateTo(CheckboxExperimentsActivity::class.java)
             }
             radioButtonsExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, RadioButtonExperimentsActivity::class.java))
+                navigateTo(RadioButtonExperimentsActivity::class.java)
             }
             switchesExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, SwitchesExperimentsActivity::class.java))
+                navigateTo(SwitchesExperimentsActivity::class.java)
             }
             textInputExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, TextFieldsExperimentsActivity::class.java))
+                navigateTo(TextFieldsExperimentsActivity::class.java)
             }
             slidersExperimentsButton.setOnClickListener {
-                startActivity(Intent(this@MainActivity, SlidersExperimentsActivity::class.java))
+                navigateTo(SlidersExperimentsActivity::class.java)
             }
         }
+    }
+
+    private fun navigateTo(activityClass: Class<*>) {
+        startActivity(Intent(this@MainActivity, activityClass))
     }
 }
