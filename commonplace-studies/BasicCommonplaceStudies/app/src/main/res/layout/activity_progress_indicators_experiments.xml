@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.progressindicators.ProgressIndicatorsExperimentsActivity">
+
+    <TextView
+        android:id="@+id/nativeSectionTitleTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/progress_indicators_experiments_native"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nativeSectionIndeterminateTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/progress_indicators_experiments_indeterminate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nativeSectionTitleTextView" />
+
+    <ProgressBar
+        android:id="@+id/indeterminateNativeProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toStartOf="@id/styledIndeterminateNativeProgress"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nativeSectionIndeterminateTextView" />
+
+    <ProgressBar
+        android:id="@+id/styledIndeterminateNativeProgress"
+        style="@style/Widget.App.Native.ProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/indeterminateNativeProgress"
+        app:layout_constraintEnd_toStartOf="@id/customIndeterminateNativeProgress"
+        app:layout_constraintStart_toEndOf="@id/indeterminateNativeProgress"
+        app:layout_constraintTop_toTopOf="@id/indeterminateNativeProgress" />
+
+    <ProgressBar
+        android:id="@+id/customIndeterminateNativeProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:indeterminateDrawable="@drawable/progress_indicator_indeterminate_custom_drawable"
+        app:layout_constraintBottom_toBottomOf="@id/styledIndeterminateNativeProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/styledIndeterminateNativeProgress"
+        app:layout_constraintTop_toTopOf="@id/styledIndeterminateNativeProgress" />
+
+    <TextView
+        android:id="@+id/nativeSectionDeterminateTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/progress_indicators_experiments_determinate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indeterminateNativeProgress" />
+
+    <ProgressBar
+        android:id="@+id/determinateNativeProgress"
+        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:progress="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nativeSectionDeterminateTextView" />
+
+    <TextView
+        android:id="@+id/materialSectionTitleTextView"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/progress_indicators_experiments_material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/determinateNativeProgress" />
+
+    <TextView
+        android:id="@+id/materialSectionIndeterminateTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/progress_indicators_experiments_indeterminate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionTitleTextView" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/materialCircularIndeterminateProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:indeterminate="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionIndeterminateTextView" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/materialStyledCircularIndeterminateProgressIndicator"
+        style="@style/Widget.App.Material.ProgressIndicator.Circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@id/materialCircularIndeterminateProgressIndicator"
+        app:layout_constraintStart_toEndOf="@id/materialCircularIndeterminateProgressIndicator"
+        app:layout_constraintTop_toTopOf="@id/materialCircularIndeterminateProgressIndicator" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/materialLinearIndeterminateProgressIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@id/materialCircularIndeterminateProgressIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/materialStyledCircularIndeterminateProgressIndicator"
+        app:layout_constraintTop_toTopOf="@id/materialCircularIndeterminateProgressIndicator" />
+
+    <TextView
+        android:id="@+id/materialSectionDeterminateTextView"
+        style="?attr/textAppearanceSubtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/progress_indicators_experiments_determinate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCircularIndeterminateProgressIndicator" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/materialCircularDeterminateProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialSectionDeterminateTextView"
+        tools:progress="25" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/materialLinearDeterminateProgressIndicator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/materialCircularDeterminateProgressIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/materialCircularDeterminateProgressIndicator"
+        app:layout_constraintTop_toTopOf="@id/materialCircularDeterminateProgressIndicator"
+        tools:progress="25" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nativeDeterminateProgressTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minWidth="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/setNativeDeterminateProgressButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nativeDeterminateProgressTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+            tools:text="25" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/setNativeDeterminateProgressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/progress_indicators_experiments_native_set_progress_button"
+        app:layout_constraintBottom_toBottomOf="@id/nativeDeterminateProgressTextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nativeDeterminateProgressTextInputLayout"
+        app:layout_constraintTop_toTopOf="@id/nativeDeterminateProgressTextInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

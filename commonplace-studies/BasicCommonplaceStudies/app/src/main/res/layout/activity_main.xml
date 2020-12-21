@@ -43,4 +43,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_screen_cta_sliders_experiments" />
 
+    <Button
+        android:id="@+id/progressIndicatorsExperimentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_screen_cta_progress_indicators_experiments" />
+
 </LinearLayout>

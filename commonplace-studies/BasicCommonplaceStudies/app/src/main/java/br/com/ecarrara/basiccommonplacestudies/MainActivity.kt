@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.progressindicators.ProgressIndicatorsExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.sliders.SlidersExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.switches.SwitchesExperimentsActivity
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity() {
             }
             slidersExperimentsButton.setOnClickListener {
                 navigateTo(SlidersExperimentsActivity::class.java)
+            }
+            progressIndicatorsExperimentsButton.setOnClickListener {
+                navigateTo(ProgressIndicatorsExperimentsActivity::class.java)
             }
         }
     }

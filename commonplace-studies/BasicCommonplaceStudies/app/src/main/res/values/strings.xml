@@ -8,6 +8,7 @@
     <string name="main_screen_cta_switch_experiments">Switches Experiments</string>
     <string name="main_screen_cta_text_fields_experiments">Text Fields Experiments</string>
     <string name="main_screen_cta_sliders_experiments">Sliders Experiments</string>
+    <string name="main_screen_cta_progress_indicators_experiments">Progress Indicators Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -61,4 +62,12 @@
     <!-- Sliders Experiments -->
     <string name="sliders_experiments_material_continous_slider">Material Slider Continuous</string>
     <string name="sliders_experiments_material_discrete_slider">Material Slider Discrete</string>
+
+    <!-- Progress Indicators Experiments -->
+    <string name="progress_indicators_experiments_native">Native Progress Indicator</string>
+    <string name="progress_indicators_experiments_native_set_progress_button">Set progress</string>
+    <string name="progress_indicators_experiments_material">Material Progress Indicator</string>
+    <string name="progress_indicators_experiments_indeterminate">Indeterminate</string>
+    <string name="progress_indicators_experiments_determinate">Determinate</string>
+
 </resources>
