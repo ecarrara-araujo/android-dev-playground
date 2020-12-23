@@ -37,6 +37,9 @@
         <activity
             android:name=".ui.progressindicators.ProgressIndicatorsExperimentsActivity"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.snackbars.SnackbarsExperimentsActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

@@ -49,4 +49,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_screen_cta_progress_indicators_experiments" />
 
+    <Button
+        android:id="@+id/snackbarsExperimentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_screen_cta_snackbars_experiments" />
+
 </LinearLayout>

@@ -9,6 +9,7 @@ import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsAc
 import br.com.ecarrara.basiccommonplacestudies.ui.progressindicators.ProgressIndicatorsExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.radiobutton.RadioButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.sliders.SlidersExperimentsActivity
+import br.com.ecarrara.basiccommonplacestudies.ui.snackbars.SnackbarsExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.switches.SwitchesExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.textfields.TextFieldsExperimentsActivity
 
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity() {
             }
             progressIndicatorsExperimentsButton.setOnClickListener {
                 navigateTo(ProgressIndicatorsExperimentsActivity::class.java)
+            }
+            snackbarsExperimentsButton.setOnClickListener {
+                navigateTo(SnackbarsExperimentsActivity::class.java)
             }
         }
     }

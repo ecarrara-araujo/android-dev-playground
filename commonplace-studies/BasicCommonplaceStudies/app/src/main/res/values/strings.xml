@@ -9,6 +9,7 @@
     <string name="main_screen_cta_text_fields_experiments">Text Fields Experiments</string>
     <string name="main_screen_cta_sliders_experiments">Sliders Experiments</string>
     <string name="main_screen_cta_progress_indicators_experiments">Progress Indicators Experiments</string>
+    <string name="main_screen_cta_snackbars_experiments">Snackbars Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -69,5 +70,15 @@
     <string name="progress_indicators_experiments_material">Material Progress Indicator</string>
     <string name="progress_indicators_experiments_indeterminate">Indeterminate</string>
     <string name="progress_indicators_experiments_determinate">Determinate</string>
+
+    <!-- Snackbars Experiments -->
+    <string name="snackbars_experiments_material">Material Snackbars</string>
+    <string name="snackbars_experiments_anchor_button">Anchor Button</string>
+    <string name="snackbars_experiments_snackbar_message">This is a snackbar!</string>
+    <string name="snackbars_experiments_show_snackbar">Show Snackbar</string>
+    <string name="snackbars_experiments_enable_anchor">Enable Anchor</string>
+    <string name="snackbars_experiments_show_action_button">Show Action Button</string>
+    <string name="snackbars_experiments_apply_custom_styling">Apply Custom Styling</string>
+    <string name="snackbars_experiments_action_button">Action</string>
 
 </resources>
