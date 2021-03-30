@@ -1,9 +1,9 @@
 package br.com.ecarrara.basiccommonplacestudies
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.ecarrara.basiccommonplacestudies.databinding.ActivityMainBinding
+import br.com.ecarrara.basiccommonplacestudies.extensions.navigateTo
 import br.com.ecarrara.basiccommonplacestudies.ui.button.ButtonExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.checkbox.CheckboxExperimentsActivity
 import br.com.ecarrara.basiccommonplacestudies.ui.dialogs.DialogExperimentsActivity
@@ -55,9 +55,5 @@ class MainActivity : AppCompatActivity() {
                 navigateTo(DialogExperimentsActivity::class.java)
             }
         }
-    }
-
-    private fun navigateTo(activityClass: Class<*>) {
-        startActivity(Intent(this@MainActivity, activityClass))
     }
 }
