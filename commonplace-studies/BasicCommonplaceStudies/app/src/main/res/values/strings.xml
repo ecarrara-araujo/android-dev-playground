@@ -11,6 +11,7 @@
     <string name="main_screen_cta_progress_indicators_experiments">Progress Indicators Experiments</string>
     <string name="main_screen_cta_snackbars_experiments">Snackbars Experiments</string>
     <string name="main_screen_cta_dialogs_experiments">Dialogs Experiments</string>
+    <string name="main_screen_cta_lists_experiments">Lists Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -96,5 +97,10 @@
     <string name="dialog_experiments_dialog_cancelation_button">Nay</string>
     <string name="dialog_experiments_dialog_ack_button">Got that!</string>
     <string name="dialog_experiments_button_tapped">Button Tapped!</string>
+
+    <!-- Lists Experiments -->
+    <string name="lists_experiments_open_carousel_experiments_button">Open Carousel Experiments</string>
+
+    <!-- Lists with Carousels Experiments -->
 
 </resources>

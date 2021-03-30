@@ -43,6 +43,12 @@
         <activity
             android:name=".ui.dialogs.DialogExperimentsActivity"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.lists.ListsExperimentsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.lists.carousels.ListWithCarouselsExperimentsActivity"
+            android:parentActivityName=".ui.lists.ListsExperimentsActivity" />
     </application>
 
 </manifest>
