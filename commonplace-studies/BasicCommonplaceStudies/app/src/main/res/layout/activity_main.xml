@@ -55,4 +55,10 @@
         android:layout_height="wrap_content"
         android:text="@string/main_screen_cta_snackbars_experiments" />
 
+    <Button
+        android:id="@+id/dialogsExperimentsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_screen_cta_dialogs_experiments" />
+
 </LinearLayout>

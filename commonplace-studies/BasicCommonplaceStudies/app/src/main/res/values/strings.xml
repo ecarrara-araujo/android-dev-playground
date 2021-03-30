@@ -10,6 +10,7 @@
     <string name="main_screen_cta_sliders_experiments">Sliders Experiments</string>
     <string name="main_screen_cta_progress_indicators_experiments">Progress Indicators Experiments</string>
     <string name="main_screen_cta_snackbars_experiments">Snackbars Experiments</string>
+    <string name="main_screen_cta_dialogs_experiments">Dialogs Experiments</string>
 
     <!-- Button Experiments -->
     <string name="button_experiments_material_buttons">Material Buttons</string>
@@ -80,5 +81,20 @@
     <string name="snackbars_experiments_show_action_button">Show Action Button</string>
     <string name="snackbars_experiments_apply_custom_styling">Apply Custom Styling</string>
     <string name="snackbars_experiments_action_button">Action</string>
+
+    <!-- Dialogs Experiments -->
+    <string name="dialog_experiments_material">Material Dialogs</string>
+    <string name="dialog_experiments_show_alert_dialog">Show Alert Dialog</string>
+    <string name="dialog_experiments_show_simple_dialog">Show Simple Dialog</string>
+    <string name="dialog_experiments_show_confirmation_single_choice_dialog">Show Confirmation Dialog - Single Choice</string>
+    <string name="dialog_experiments_show_confirmation_multiple_choice_dialog">Show Confirmation Dialog - Multiple Choice</string>
+    <string name="dialog_experiments_show_custom_view_dialog">Show Custom View Dialog</string>
+    <string name="dialog_experiments_show_full_screen_dialog">Show Full Screen Dialog</string>
+    <string name="dialog_experiments_dialog_title">This is a title</string>
+    <string name="dialog_experiments_dialog_supporting_text">Supporting Text</string>
+    <string name="dialog_experiments_dialog_confirmation_button">Yeah</string>
+    <string name="dialog_experiments_dialog_cancelation_button">Nay</string>
+    <string name="dialog_experiments_dialog_ack_button">Got that!</string>
+    <string name="dialog_experiments_button_tapped">Button Tapped!</string>
 
 </resources>
